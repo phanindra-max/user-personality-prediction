@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personality Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="h-screen w-full flex flex-col justify-between">
+        <div class="bg-gray-900 text-white py-4 font-[Montserrat] font-semibold">
+            <ul class="flex justify-center gap-8">
+
+                <li><a href="\index" class="hover:tracking-widest hover:font-black transition-all duration-300">Big5</a>
+                </li>
+
+                <li><a href="\index1"
+                        class="hover:tracking-widest hover:font-black transition-all duration-300">Text-Based</a>
+                </li>
+
+                <li><a href="\notebook"
+                        class="hover:tracking-widest hover:font-black transition-all duration-300">Notebook</a>
+                </li>
+                <li><a href="\about"
+                    class="hover:tracking-widest hover:font-black transition-all duration-300">About</a>
+                </li>
+                <li><a href="\login"
+                    class="hover:tracking-widest hover:font-black transition-all duration-300">Signout</a>
+                </li>
+
+            </ul>
+        </div>
+
+        {% block main %}
+        {% endblock %}
+
+        <div class="text-center bg-gray-900 text-white">
+            <div class="flex justify-center py-5">
+             
+  
+            <div class="text-center p-4 font-semibold" style="background-color: rgba(0, 0, 0, 0.2);">
+              <p>Project working prototype for demonstration</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

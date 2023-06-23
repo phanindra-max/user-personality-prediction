@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="w-full flex flex-col justify-center items-center text-center">
+
+    <div class="bg-[#4298B4] text-center w-full">
+        <p class="text-3xl mt-28 font-[Montserrat] text-white font-black px-2">Welcome To Dashboard</p>
+        <p class="text-lg font-[Montserrat] text-white px-2">Personality Predictions Based on User Behavior
+          on the Facebook Social Media Platform</p>
+
+        <a href="#test" type="submit"
+            class="my-5 shadow-xl bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-500 hover:border-blue-400 rounded">
+            Graph:
+        </a>
+
+        <img src=" {{url_for('static', filename='assets/header-mountains-desktop.png' )}}" class="mt-10 w-full">
+    </div>
+
+
+    <div id="test" class="px-10">
+                
+                <p>
+					Sample Outcome:
+					<br>
+					<img src="../static/download.png">
+				  </p><br>
+				  <p>Accuracy of SPLICE Vectorizer:</p> <br />
+				  <img src="../static/download (1).png">
+				  <br>
+				  <p>Accuracy of SNA Vectorizer:</p>
+				  <img src="../static/download (1).png">
+				  <br>
+				  <p>Accuracy of LIWC:</p><br>
+				  <img src="../static/download (2).png">
+				  <br>
+				  <p>Accuracy of SPLICE + SNA + LIWC:
+					<img src="../static/download (3).png">
+				  </p>
+              <br>
+				
+            </div>
+         
+
+</div>
+{% endblock %}

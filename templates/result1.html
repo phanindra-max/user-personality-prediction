@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="w-full flex flex-col justify-center items-center text-center">
+
+    <div class="bg-[#4298B4] text-center w-full">
+        <p class="text-3xl mt-28 font-[Montserrat] text-white font-black px-2">Welcome To Dashboard</p>
+        <p class="text-lg font-[Montserrat] text-white px-2">Personality Predictions Based on User Behavior
+          on the Facebook Social Media Platform</p>
+
+        <a href="#test" type="submit"
+            class="my-5 shadow-xl bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-500 hover:border-blue-400 rounded">
+            Result for the Post:
+        </a>
+
+        <img src=" {{url_for('static', filename='assets/header-mountains-desktop.png' )}}" class="mt-10 w-full">
+    </div>
+
+
+    <div id="test" class="px-10">
+                    
+            <div style="font-size: larger;">            
+               
+                      <div class="results">
+          
+                      <p id="message" style="font-size: x-large;"><strong>Message: </strong>{{message}}</p>
+                      <br>
+                      <br>
+                      <p id="message" style="font-size: xx-large;"><strong>Label: </strong></p>
+          
+                      {% if prediction == 0%}
+                      <h2 style="color:blue ; " >THE PERSONALITY TYPE IS AGREEABLENESS FOR THE INPUT POSTS!</h2>
+                      <br>
+                      
+                      <br>
+                      {% elif prediction == 1%}
+                      <h2 style="color:rgb(38, 255, 0); ">THE PERSONALITY TYPE IS CONSCIENTIOUSNESS FOR THE INPUT POSTS!</h2>
+                      <br>
+                      <br>
+                      {% elif prediction == 2%}
+                      <h2 style="color:rgb(0, 81, 255); ">THE PERSONALITY TYPE IS EXTRAVERSION FOR THE INPUT POSTS!</h2>
+                      <br>
+                      <br>
+                      {% elif prediction == 3%}
+                      <h2 style="color:rgb(140, 0, 255); ">THE PERSONALITY TYPE IS NEUROTICIISM FOR THE INPUT POSTS!</h2>
+                      <br>
+                      <br>
+                      {% elif prediction == 4%}
+                      <h2 style="color:rgb(255, 8, 0); ">THE PERSONALITY TYPE IS OPENNESS FOR THE INPUT POSTS!</h2>
+                      <br>
+                      {% endif %}
+                  </div>
+            </div>
+
+          </div>
+
+
+        </div>
+        {% endblock %}

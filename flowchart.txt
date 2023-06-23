@@ -1,0 +1,105 @@
+Notebook
+----------
+
+SPLICE
+-------
+
+1. Importing the Packages
+2. Loading the Dataset - Facebook Posts
+3. Data Processing
+	- Dropping the duplicates
+	- Cleaning the Text
+		- Cleaning the emojis
+		- Remove the Punctuations, links, mention
+	- Cleaning the hashtags
+	- filtering out the speacial characters
+	- removing all multiple spaces
+4. Visualization using Seaborn and Matplotlib
+5. Tokenization using 
+	- TFIDF Tokenizer
+6. Feature Selection
+7. Splitting the data to train and test
+8. Building the model
+    	- SVM
+	- LR
+	- Gradient Boosting
+	- XGBoost
+	- Voting Classifier (XGB + DT)
+    
+9. Training the model
+
+SNA
+-------
+
+10. Importing the Packages
+11. Loading the Dataset - Facebook Posts
+12. Data Processing
+	- Dropping the duplicates
+	- Cleaning the Text
+		- Cleaning the emojis
+		- Remove the Punctuations, links, mention
+	- Cleaning the hashtags
+	- filtering out the speacial characters
+	- removing all multiple spaces
+13. Visualization using Seaborn and Matplotlib
+14. Tokenization using 
+	- Count Vectorizer
+15. Feature Selection
+16. Splitting the data to train and test
+17. Building the model
+    	- SVM
+	- LR
+	- Gradient Boosting
+	- XGBoost
+	- Voting Classifier (XGB + DT)
+    
+18. Training the model
+
+LIWC
+-------
+
+19. Importing the Packages
+20. Loading the Dataset - Facebook Posts
+21. Data Processing
+	- Dropping the duplicates
+	- Cleaning the Text
+		- Cleaning the emojis
+		- Remove the Punctuations, links, mention
+	- Cleaning the hashtags
+	- filtering out the speacial characters
+	- removing all multiple spaces
+22. Visualization using Seaborn and Matplotlib
+23. Tokenization using 
+	- LIWC dic and TFIDF Tokenizer
+24. Feature Selection
+25. Splitting the data to train and test
+26. Building the model
+    	- SVM
+	- LR
+	- Gradient Boosting
+	- XGBoost
+	- Voting Classifier (XGB + DT)
+    
+27. Training the model
+
+Flask Framework
+----------------
+
+28. Flask Framework with Sqlite for signup and signin
+29. Importing the packages
+30. Exploring the data
+31. Vectorizer and tokenizing the content 
+32. Feature Extraction and Splitting the dataset
+33. Building the model
+34. User gives input 
+35. The given input is translated and preprocessed for prediction
+36. Trained model is used for prediction
+37. Final outcome is displayed through frontend
+
+Extension
+----------
+
+In the base paper the author mention to use different Machine Learning with different Tokenizer for analysis the dataset,
+from which in XGBoost got 73% of accuracy
+As an extension we apply Voting Classifier(XGB + DT) for analysis the dataset and got 99% of accuracy,
+So with the voting classifier we built the model and it is used for predicting the user input in the frontend.

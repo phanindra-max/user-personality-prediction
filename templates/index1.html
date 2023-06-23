@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="w-full flex flex-col justify-center items-center text-center">
+
+    <div class="bg-[#4298B4] text-center w-full">
+        <p class="text-3xl mt-28 font-[Montserrat] text-white font-black px-2">Welcome To Dashboard</p>
+        <p class="text-lg font-[Montserrat] text-white px-2">Personality Predictions Based on User Behavior
+          on the Facebook Social Media Platform</p>
+
+        <a href="#test" type="submit"
+            class="my-5 shadow-xl bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-500 hover:border-blue-400 rounded">
+            Wrtie the Posts:
+        </a>
+
+        <img src=" {{url_for('static', filename='assets/header-mountains-desktop.png' )}}" class="mt-10 w-full">
+    </div>
+
+
+    <div id="test" class="px-10">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3">
+            <form action="/predict1" method="POST">
+            <h1>Enter Your Message Here</h1>
+            <!-- <input type="text" name="comment"/> -->
+            <div align= center>
+              <textarea name="message" rows="6" cols="80"></textarea>
+            <br/>
+            <br/>
+            <br/>
+            <input type="submit" class="btn-info" value="predict">
+            <br>
+            </div>
+            
+        </form>
+    </div>
+            
+  </div>
+
+
+</div>
+{% endblock %}

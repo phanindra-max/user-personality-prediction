@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="w-full flex flex-col justify-center items-center text-center">
+
+    <div class="bg-[#4298B4] text-center w-full">
+        <p class="text-3xl mt-28 font-[Montserrat] text-white font-black px-2">Welcome To Dashboard</p>
+        <p class="text-lg font-[Montserrat] text-white px-2">Personality Predictions Based on User Behavior
+          on the Facebook Social Media Platform</p>
+
+        <a href="#test" type="submit"
+            class="my-5 shadow-xl bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-500 hover:border-blue-400 rounded">
+            Take The Test
+        </a>
+
+        <img src=" {{url_for('static', filename='assets/header-mountains-desktop.png' )}}" class="mt-10 w-full">
+    </div>
+
+
+    <div id="test" class="px-10">
+        <p class="text-3xl font-[Montserrat] text-gray-700 font-black mt-14">Enter Your Details</p>
+        <p class="font-[Montserrat] text-gray-700 mb-14 font-semibold">8 is Highest, 5 is Medium and 1 is Lowest for the
+            fields</p>
+
+        <form class="w-full" action="/predict" method="post">
+            <div class="flex flex-row -mx-3 mb-4">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-first-name">
+                        First Name
+                    </label>
+
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-first-name" type="text" placeholder="Jane" required>
+
+                </div>
+
+                <div class="w-full md:w-1/2 px-3">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-last-name">
+                        Last Name
+                    </label>
+
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 
+                        leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name"
+                        type="text" placeholder="Doe">
+                </div>
+            </div>
+
+
+
+            <div class="w-full">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                    Gender
+                </label>
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="grid-state" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6 mt-5">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-first-name">
+                        Openness <br> <i>Open to trying new things</i>
+                    </label>
+
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-first-name" type="number" placeholder="1-8" min="1" max="8" name="openness" required>
+
+
+                </div>
+
+                <div class="w-full md:w-1/2 px-3">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-last-name">
+                        Neuroticism <br> <i>Emotional Instability</i>
+                    </label>
+
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 
+                        leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name"
+                        type="number" placeholder="1-8" min="1" max="8" name="neuroticism" required>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6 mt-5">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-first-name">
+                        Conscientiousness <br> <i>Self-discipline</i>
+                    </label>
+
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-first-name" type="number" placeholder="1-8" min="1" max="8" name="conscientiousness"
+                        required>
+
+                </div>
+
+                <div class="w-full md:w-1/2 px-3">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-last-name">
+                        Agreeableness <br> <i>Caring about others</i>
+                    </label>
+
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 
+                        leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name"
+                        type="number" placeholder="1-8" min="1" max="8" name="agreeableness" required>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6 mt-5">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-first-name">
+                        Extraversion <br> <i>How much social you are</i>
+                    </label>
+
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="grid-first-name" type="number" placeholder="1-8" min="1" max="8" name="extraversion"
+                        required>
+
+                </div>
+
+                <div class="w-full md:w-1/2 px-3">
+
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                        for="grid-last-name">
+                        Age <br> <i>17 to 28 for accurate results</i>
+                    </label>
+
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 
+                        leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name"
+                        type="number" min="13" max="100" name="age" required>
+                </div>
+
+            </div>
+
+            <button type="submit"
+                class="mt-5 mb-20 shadow-xl bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 border-b-4 border-blue-500 hover:border-blue-400 rounded">
+                Submit
+            </button>
+        </form>
+    </div>
+
+
+</div>
+{% endblock %}
