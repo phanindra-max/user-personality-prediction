@@ -13,7 +13,7 @@ h5py==2.10.0
 joblib==1.2.0
 emoji==1.6.3
 tensorflow-hub==0.12.0
-tensorflow==2.3.1
+tensorflow==2.12.1
 keras==2.13.1
 protobuf==3.20.0
 scipy==1.3.1 #install separately to avoid conflict error
